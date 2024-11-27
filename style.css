@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap');
+
+.font-lora{
+    font-family: "Lora", serif;
+}
+
+.font-outfit{
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 200px 2rem 1fr;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-family: "Lora", serif;
+}
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+    overflow-y: auto;
+}
+
+.id-sidebar ul li a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    padding: 10px 20px;
+    background-color: white;
+    margin: 10px;
+}
+
+.id-sidebar ul li a:hover,
+.id-sidebar ul li a.active {
+    background-color: aquamarine;
+}
+
+.certificate-1{
+    height: 794px;
+    width: 1123px;
+    background: url(./certificate-1/cer-bg.png) no-repeat center/contain;
+    margin: 50px 0;
+}
+.certificate-1 h1{
+font-size: 55px;
+font-weight: 900;
+color: #1e3653;
+}
+
+
