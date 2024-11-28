@@ -1,12 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
 
-.font-lora{
+.font-lora {
     font-family: "Lora", serif;
 }
 
-.font-outfit{
+.font-outfit {
     font-family: "Outfit", sans-serif;
+}
+
+.font-alge {
+    font-family: "Alegreya", serif;
 }
 
 body {
@@ -51,16 +56,47 @@ main {
     background-color: aquamarine;
 }
 
-.certificate-1{
+.certificate-1 {
     height: 794px;
     width: 1123px;
     background: url(./certificate-1/cer-bg.png) no-repeat center/contain;
     margin: 50px 0;
 }
-.certificate-1 h1{
-font-size: 55px;
-font-weight: 900;
-color: #1e3653;
+
+.certificate-1 h1 {
+    font-size: 35px;
+    font-weight: 900;
+    color: #1e3653;
+    line-height: 1.2;
 }
 
+.certificate-type {
+    font-weight: 900;
+}
 
+.certificate-1 input[type="checkbox"]:checked {
+    background-color: #4caf50;
+    /* Checked color */
+    border-color: #4caf50;
+    color: black;
+    /* Optional: Adding a check mark or background image */
+    background-image: url('check-icon.svg');
+    background-size: cover;
+}
+
+.certificate-1 small {
+    font-size: 12px;
+    line-height: 1;
+}
+
+.signature-section img{
+    height: 50px;
+    object-fit: contain;
+}
+
+#badge{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    
+}
