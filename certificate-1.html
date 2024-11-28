@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="signature-section w-75 mx-auto">
-                <div class="row align-items-end">
+                <div class="row align-items-end justify-content-center">
                     <div class="col-3 text-center">
                         <img src="./sign-1.png" alt="" width="100" class="">
                         <p class="m-0">John Doe</p>
@@ -187,7 +187,42 @@
     </main>
 
 
-    <script src="main.js"></script>
+    <script>
+        async function downloadPDF() {
+            const mainContent = document.querySelector('main'); // Select the main content to capture
+
+            // Capture the main content using html2canvas with high scale for better resolution
+            const canvas = await html2canvas(mainContent, { scale: 2 });
+            const imgData = canvas.toDataURL('image/png');
+
+            // Create jsPDF instance in landscape mode ('l'), A4 size (210mm x 297mm)
+            const pdf = new jspdf.jsPDF('l', 'mm', 'a4');
+            const pdfWidth = pdf.internal.pageSize.getWidth();  // 297mm in landscape mode
+            const pdfHeight = pdf.internal.pageSize.getHeight(); // 210mm in landscape mode
+
+            // Calculate the aspect ratio of the content
+            const contentWidth = canvas.width;
+            const contentHeight = canvas.height;
+            const contentAspectRatio = contentWidth / contentHeight;
+
+            // Set the image to fill the entire page, maintaining the aspect ratio
+            let imgWidth = pdfWidth;
+            let imgHeight = pdfWidth / contentAspectRatio;
+
+            // If the image is taller than the page, adjust its height to fit the page
+            if (imgHeight > pdfHeight) {
+                imgHeight = pdfHeight;
+                imgWidth = pdfHeight * contentAspectRatio;
+            }
+
+            // Add the image to the PDF
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+
+            // Save the generated PDF
+            pdf.save('certificate.pdf');
+        }
+
+    </script>
 
 </body>
 
