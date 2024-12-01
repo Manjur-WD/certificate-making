@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 .font-lora {
     font-family: "Lora", serif;
+}
+
+.font-raleway{
+    font-family: "Raleway", sans-serif;
 }
 
 .font-outfit {
@@ -12,6 +16,10 @@
 
 .font-alge {
     font-family: "Alegreya", serif;
+}
+
+.font-cinzel{
+    font-family: "Cinzel", serif;
 }
 
 body {
@@ -24,7 +32,6 @@ body {
     gap: 2rem;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
-    font-family: "Lora", serif;
 }
 
 main {
@@ -60,6 +67,24 @@ main {
     height: 794px;
     width: 1123px;
     background: url(./certificate-1/cer-bg.png) no-repeat center/contain;
+    margin: 50px 0;
+}
+.certificate-2 {
+    height: 794px;
+    width: 1123px;
+    background: url(./certificate-2/cer-2.png) no-repeat center/contain;
+    margin: 50px 0;
+}
+.certificate-3 {
+    height: 794px;
+    width: 1123px;
+    background: url(./certificate-3/cer-3.png) no-repeat center/contain;
+    margin: 50px 0;
+}
+.certificate-4 {
+    height: 794px;
+    width: 1123px;
+    background: url(./certificate-4/cer-4.png) no-repeat center/contain;
     margin: 50px 0;
 }
 
@@ -98,5 +123,23 @@ main {
     position: absolute;
     top: 20%;
     left: 5%;
+    
+}
+.certificate-2 #badge{
+    position: absolute;
+    top: 18%;
+    left: 12%;
+    
+}
+.certificate-3 #badge{
+    position: absolute;
+    top: 18%;
+    left: 12%;
+    
+}
+.certificate-4 #badge{
+    position: absolute;
+    top: 1%;
+    left: 3%;
     
 }
